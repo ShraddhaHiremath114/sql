@@ -21,4 +21,6 @@ select sum(salary) from aggregatefundemo;
 -- avg
 select avg(salary) from aggregatefundemo; 
 -- count
-select count(id) from aggregatefundemo; 
+select count(salary) from aggregatefundemo; -- will not consider null values
+select count(*) from aggregatefundemo; -- gives total no of rows in table also consider null
+select distinct(count(*)) from aggregatefundemo; -- will not take duplicate values
